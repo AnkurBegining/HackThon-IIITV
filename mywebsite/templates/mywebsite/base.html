@@ -1,0 +1,268 @@
+{% load staticfiles %}
+<html>
+<head>
+    <title>InterAdicr</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic|Open+Sans+Condensed:300,300italic,700"
+          rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/dropDownStyle.css' %}" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--chng-->
+    <script>
+
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse firstContainer">
+    <div class="container-fluid">
+
+        <!--Logo-->
+
+        <div class="navbar-header">
+
+            <!--If space is not there then this button will help to expand-->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'mywebsite:firstPage' %}">internAdicr</a>
+
+        </div>
+
+        <!--Item-->
+        <div class="collapse navbar-collapse" id="topNavBar">
+            <form class="navbar-form navbar-left" role="search" method="get" action="#">
+                <input type="text" class="form-control" name="q" value="" placeholder="ex..">
+                <button type="submit" class="btn btn-default">Search</button>
+            </form>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="Internship">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>&nbsp;
+                        Entrepreneurship
+                    </a>
+
+                </li>
+                <li class="SummerT">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>&nbsp;
+                        Training
+                    </a>
+
+                </li>
+                <li class="blog">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;
+                        Blog & Video
+                    </a>
+
+                </li>
+
+                {% if user.is_authenticated  and user.is_active %}
+
+                    <li class="">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;
+                            <button class="btn btn-primary">LOGOUT</button>
+
+                        </a>
+
+                    </li>
+                {% else %}
+                <li class="">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;
+                        <button class="btn btn-primary">Log In</button>
+
+                    </a>
+
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">
+                        <button class="btn btn-primary dropdown-toggle register" type="button"
+                                data-toggle="dropdown"
+                                aria-expanded="true">REGISTER
+                        </button>
+                        <ul class="dropdown-menu">
+                            <a href="#">
+                                Student
+                            </a>
+                            <a href="#">
+                                Company
+                            </a>
+                        </ul>
+                    </a>
+                </li>
+                {% endif %}
+
+            </ul>
+        </div>
+    </div>
+
+</nav>
+{% block content %}
+{% endblock %}
+</div>
+<nav class="navbar navbar-inverse belowContainer">
+
+
+    <div class="max-width-container ">
+
+        <div class="container-fluid ">
+            <div class="row belowRow">
+                <div class="col-md-3 visible-md visible-lg  footer-column">
+                    <div class="footer-list">
+                        <h3 style="color: silver">
+                            Internships by places
+                        </h3>
+                        <div class="footer-list-item">
+                            <a href="#">Internship in Nepal</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Internship in Kathmandu</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Internship in Pokhra</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Internship in Naryanghat</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Internship in Birgunj</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Internship in Hathuda</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Internship in Biratnagar</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Internship in other cities of Nepal</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Virtual internship</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 visible-md visible-lg  footer-column">
+                    <div class="footer-list">
+                        <h3 style="color: silver">Internship by Stream</h3>
+                        <div class="footer-list-item">
+                            <a href="#">Computer Science Internship</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Electronics Internship</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Mechanical Internship</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Civil Internship</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Marketing Internship</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Chemical Internship</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Finance Internship</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Summer Research Fellowship</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Top University Internship</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 visible-md visible-lg  footer-column">
+                    <div class="footer-list">
+                        <h3 style="color: silver">
+                            Online Trainings
+                        </h3>
+                        <div class="footer-list-item">
+                            <a href="#">Android Training</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Web Development Training</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Digital Marketing Training</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Programming with C &amp; C++</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">AutoCAD Training</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Hacking</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Data Analytics Training</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Python Online Training
+                            </a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">IoT Training</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 footer-column" id="about-us-container">
+                    <div class="footer-list">
+                        <h3 style="color: silver">About InternAdicr</h3>
+                        <div class="footer-list-item">
+                            <a href="#">About us</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">We're hiring</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Hire interns for your company</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Advertise with us</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Team Diary</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Our Services</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Terms &amp; Conditions</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Privacy</a>
+                        </div>
+                        <div class="footer-list-item">
+                            <a href="#">Contact us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row" id="copyright">
+                © Copyright 2017 INTERNADICR
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+
+</body>
+</html>

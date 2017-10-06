@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+h2 {
+    font-family: 'Catamaran', sans-serif;
+
+}
+
+.nav li .register a button {
+    margin-top: 0%;
+
+}
+
+form .form-group {
+    margin-top: -12px;
+    margin-left: 10% !important;
+}
+
+.blog, .Internship, .SummerT {
+    margin-top: 1.2% !important;
+}
+
+#internships {
+    text-align: center;
+}
+
+#InterA {
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.cityContainer {
+
+    border-radius: 3px;
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-top: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    left: 0;
+}
+
+.ITimage {
+    width: 100%;
+    height: auto;
+}
+
+.cityImage {
+    width: 160px;
+    height: 115px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.backFirstImage {
+    height: 335px;
+    min-width: 100%;
+}
+
+#copyright {
+    color: silver;
+    font-weight: bold;
+    font-size: 80%;
+    text-align: right;
+}
+
+.firstContainer {
+    height: 150px;
+    padding-top: 50px;
+    padding-bottom: 0px !important;
+    margin-bottom: 0%;
+}
+
+.navbar-header img {
+    max-height: 150px;
+    padding-bottom: 30px;
+    width: 300px;
+}
+
+.row {
+    padding: 20px;
+}
+
+.searchImage {
+    padding: 0px;
+}
+
+.belowRow h3 {
+    color: #ffffff;
+}
+
+.belowRow a {
+    color: #ffffff;
+}
+
+.belowContainer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 40px;
+    padding-left: 40px;
+    margin-bottom: 0px !important;
+}
+
+.footer-list-item {
+    font-size: 80%;
+
+    letter-spacing: 0.8px;
+
+}
+
+@media (max-width: 992px) {
+    #footer .footer-list .footer-list-item {
+        display: inline-block;
+        background-color: #161616;
+        padding: 5px 8px;
+        border-radius: 3px;
+        margin-top: 3px;
+        margin-right: 3px;
+    }
+
+    a {
+        color: silver !important;
+    }
+}
+
+
+
+#bg {
+    background-image: url("loginBackground.jpg");
+}
+
+#courses-container {
+    background-image: url("trainingBackground.png");
+}
+
+.loginRow {
+    padding-top: 10%;
+    padding-bottom: 20%;
+}
+
+#copyright {
+    padding-bottom: 0px;
+}
+
+.post-form textarea, .post-form input {
+    min-width: 100%;
+
+}
+
+.post h1 a, .post h1 a:visited {
+    color: #ffffff;
+}
