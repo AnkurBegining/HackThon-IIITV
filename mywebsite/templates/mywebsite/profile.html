@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+</head>
+<body>
+<div class="container-fluid backgroundImage" id="bg">
+    <div class="row loginRow">
+        <div class="col-md-8">
+            <p>
+                You have been logged in.
+                Thanks for starting with us today.
+            </p>
+            <a href="{% url 'login' %}">
+                <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;
+                <button class="btn btn-primary">LOGOUT</button>
+
+            </a>
+        </div>
+
+    </div>
+</html>

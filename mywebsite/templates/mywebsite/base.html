@@ -1,7 +1,7 @@
 {% load staticfiles %}
 <html>
 <head>
-    <title>InterAdicr</title>
+    <title>entrepreneurAdicr</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic|Open+Sans+Condensed:300,300italic,700"
           rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
@@ -31,7 +31,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{% url 'mywebsite:firstPage' %}">internAdicr</a>
+            <a class="navbar-brand" href="{% url 'mywebsite:firstPage' %}">entrepreneurAdicr</a>
 
         </div>
 
@@ -77,7 +77,7 @@
                     </li>
                 {% else %}
                 <li class="">
-                    <a href="#">
+                    <a href="{% url 'login' %}">
                         <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;
                         <button class="btn btn-primary">Log In</button>
 
@@ -121,66 +121,66 @@
                 <div class="col-md-3 visible-md visible-lg  footer-column">
                     <div class="footer-list">
                         <h3 style="color: silver">
-                            Internships by places
+                            Entrepreneurship workshop by cities
                         </h3>
                         <div class="footer-list-item">
-                            <a href="#">Internship in Nepal</a>
+                            <a href="#">Mumbai</a>
                         </div>
                         <div class="footer-list-item">
-                            <a href="#">Internship in Kathmandu</a>
+                            <a href="#">New Delhi</a>
                         </div>
                         <div class="footer-list-item">
-                            <a href="#">Internship in Pokhra</a>
+                            <a href="#">Bangolore</a>
                         </div>
                         <div class="footer-list-item">
-                            <a href="#">Internship in Naryanghat</a>
+                            <a href="#">Kolkata</a>
                         </div>
                         <div class="footer-list-item">
-                            <a href="#">Internship in Birgunj</a>
+                            <a href="#">Chennai</a>
                         </div>
                         <div class="footer-list-item">
-                            <a href="#">Internship in Hathuda</a>
+                            <a href="#">Ahmedabaad</a>
                         </div>
                         <div class="footer-list-item">
-                            <a href="#">Internship in Biratnagar</a>
+                            <a href="#">Noida</a>
                         </div>
                         <div class="footer-list-item">
-                            <a href="#">Internship in other cities of Nepal</a>
+                            <a href="#">Hyderabad</a>
                         </div>
                         <div class="footer-list-item">
-                            <a href="#">Virtual internship</a>
+                            <a href="#">Virtual Entrepreneurship</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 visible-md visible-lg  footer-column">
                     <div class="footer-list">
-                        <h3 style="color: silver">Internship by Stream</h3>
+                        <h3 style="color: silver">Entrepreneurship Ideas in popular categories</h3>
                         <div class="footer-list-item">
-                            <a href="#">Computer Science Internship</a>
+                            <a href="#">Online Ideas</a>
                         </div>
                         <div class="footer-list-item">
-                            <a href="#">Electronics Internship</a>
+                            <a href="#">Mobile Ideas</a>
                         </div>
                         <div class="footer-list-item">
-                            <a href="#">Mechanical Internship</a>
+                            <a href="#">Social Marketing & Business </a>
                         </div>
                         <div class="footer-list-item">
-                            <a href="#">Civil Internship</a>
+                            <a href="#">Service Ideas</a>
                         </div>
                         <div class="footer-list-item">
-                            <a href="#">Marketing Internship</a>
+                            <a href="#">Fab Fashion</a>
                         </div>
                         <div class="footer-list-item">
                             <a href="#">Chemical Internship</a>
                         </div>
                         <div class="footer-list-item">
-                            <a href="#">Finance Internship</a>
+                            <a href="#">The Beauty Guru</a>
                         </div>
                         <div class="footer-list-item">
-                            <a href="#">Summer Research Fellowship</a>
+                            <a href="#">Sweet & Lovely Kitchen</a>
                         </div>
                         <div class="footer-list-item">
-                            <a href="#">Top University Internship</a>
+                            <a href="#">The Different</a>
                         </div>
                     </div>
                 </div>
@@ -188,42 +188,41 @@
                 <div class="col-md-3 visible-md visible-lg  footer-column">
                     <div class="footer-list">
                         <h3 style="color: silver">
-                            Online Trainings
+                            Entrepreneurship Blog & Video
                         </h3>
                         <div class="footer-list-item">
-                            <a href="#">Android Training</a>
+                            <a href="#">TedX talk world</a>
                         </div>
                         <div class="footer-list-item">
-                            <a href="#">Web Development Training</a>
+                            <a href="#">TedX talk India</a>
                         </div>
                         <div class="footer-list-item">
-                            <a href="#">Digital Marketing Training</a>
+                            <a href="#">Digital Marketing Blog</a>
                         </div>
                         <div class="footer-list-item">
-                            <a href="#">Programming with C &amp; C++</a>
+                            <a href="#">IIT Entrepreneurship Talk</a>
                         </div>
                         <div class="footer-list-item">
-                            <a href="#">AutoCAD Training</a>
+                            <a href="#">Goverment Talk</a>
                         </div>
                         <div class="footer-list-item">
-                            <a href="#">Hacking</a>
+                            <a href="#">Smart India Blog</a>
                         </div>
                         <div class="footer-list-item">
                             <a href="#">Data Analytics Training</a>
                         </div>
                         <div class="footer-list-item">
-                            <a href="#">Python Online Training
-                            </a>
+                            <a href="#">IIM Entrepreneurship Talk</a>
                         </div>
                         <div class="footer-list-item">
-                            <a href="#">IoT Training</a>
+                            <a href="#">Self Motivation Blog</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-3 footer-column" id="about-us-container">
                     <div class="footer-list">
-                        <h3 style="color: silver">About InternAdicr</h3>
+                        <h3 style="color: silver">About EntrepreneurAdicr</h3>
                         <div class="footer-list-item">
                             <a href="#">About us</a>
                         </div>
@@ -231,7 +230,7 @@
                             <a href="#">We're hiring</a>
                         </div>
                         <div class="footer-list-item">
-                            <a href="#">Hire interns for your company</a>
+                            <a href="#">Apply for our company</a>
                         </div>
                         <div class="footer-list-item">
                             <a href="#">Advertise with us</a>
@@ -256,7 +255,7 @@
             </div>
             <hr>
             <div class="row" id="copyright">
-                © Copyright 2017 INTERNADICR
+                © Copyright 2017 ENTREPRENEURADICR
             </div>
         </div>
 
