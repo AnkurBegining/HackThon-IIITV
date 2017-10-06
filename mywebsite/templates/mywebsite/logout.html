@@ -1,0 +1,30 @@
+{% extends 'mywebsite/base.html' %}
+{% load staticfiles %}
+{% block content %}
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>logout</title>
+    </head>
+    <body>
+    <div class="container-fluid backgroundImage" id="bg">
+        <div class="row loginRow">
+            <div class="col-md-8">
+                <p>
+                    You have been logged out.
+                    Thanks for spending some quality time with us today.
+                </p>
+                <a href="{% url 'login' %}">
+                    <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;
+                    <button class="btn btn-primary">LOGIN</button>
+
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    </body>
+    </html>
+{% endblock %}

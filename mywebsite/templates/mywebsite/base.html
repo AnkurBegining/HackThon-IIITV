@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/dropDownStyle.css' %}" type="text/css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--chng-->
     <script>
@@ -68,7 +68,7 @@
                 {% if user.is_authenticated  and user.is_active %}
 
                     <li class="">
-                        <a href="#">
+                        <a href="{% url 'logout' %}">
                             <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;
                             <button class="btn btn-primary">LOGOUT</button>
 
@@ -91,14 +91,7 @@
                                 data-toggle="dropdown"
                                 aria-expanded="true">REGISTER
                         </button>
-                        <ul class="dropdown-menu">
-                            <a href="#">
-                                Student
-                            </a>
-                            <a href="#">
-                                Company
-                            </a>
-                        </ul>
+
                     </a>
                 </li>
                 {% endif %}

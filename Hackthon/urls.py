@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/login/$', views.login, name='login'),
     url(r'^accounts/profile/$', core_views.view_profile, name='view_profile'),
+    url(r'^accounts/logout/$', views.logout, {'template_name': 'mywebsite/logout.html'}, name='logout'),
 
     url(r'', include('mywebsite.urls', namespace='mywebsite')),
 ]
