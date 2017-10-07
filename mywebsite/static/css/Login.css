@@ -1,0 +1,70 @@
+body{
+	margin: 0 auto;
+	background-image: url("image1.jpg");
+	background-repeat: repeat;
+	background-size: 100% 720px;
+
+
+}
+.container{
+	width: 500px;
+	height: 500px;
+	text-align: center;
+	background-color: rgba(52, 73, 94, 0.5);
+	border-radius: 4px;
+	margin: 0 auto;
+	margin-top: 75px;
+	/*margin-right: 100px;*/
+	background-position: right;
+	background-size: 200px;
+	margin-bottom: 75px;
+	
+}
+
+.loginRow {
+    padding-top: 10%;
+    padding-bottom: 20%;
+
+}
+.container img{
+	width: 120px;
+	height: 120px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+
+}
+input[type="text"], input[type="password"]{
+	height: 30px;
+	width: 300px;
+	font-size: 18px;
+	margin-bottom: 20px;
+	background-color: #fff;
+	padding-left: 15px;
+	border-radius: 4px;
+	font-family:  "FontAwesome";
+	border: none;
+}
+.form-input::before{
+	content: "\f007";
+	position: absolute;
+	font-family: "arial";
+	padding-left: 4px;
+	color: #905906;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-size: 30px;
+}
+
+.btn-large{
+	padding: 8px 16px;
+	cursor: pointer;
+	color: #fff;
+	border-radius: 	4px;
+	border: none;
+	background-color: #2ECC71;
+	border-bottom: 2px solid #27AE60;
+	margin-bottom: 15px;
+}
+a{
+	color: #fff;
+}
