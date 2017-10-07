@@ -1,38 +1,64 @@
 {% extends 'mywebsite/base2.html' %}
 
 {% block content %}
-    <div class="cotainer-fluid" >
+    <div class="cotainer-fluid" id="ideaDetail">
         <div class="row">
-            <div class="col-md-12" id="ideaDetail">
-                {% if post.published_date %}
-                    <div class="date">
-                        {{ post.published_date }}
-                    </div>
-                {% else %}
-                    <a class="btn btn-default" href="#">Publish</a>
-                {% endif %}
-                <a class="btn btn-default" href="#"><span
-                        class="glyphicon glyphicon-pencil"></span></a>
-                <a class="btn btn-default" href="#"><span
-                        class="glyphicon glyphicon-remove"></span></a>
 
+            <div class="col-md-12" >
                 <h1 id="ideaTitle">
                     {{ post.title }}
                 </h1>
 
-                <h2>
-                    {{ post.author|linebreaks }}
-                    Categories: {{ post.ideaCategories|linebreaks }}
-                    {{ post.cofounderOfIdeas }}
-                </h2>
-
-
                 <p>
+                <h3>
+                    <button class="btn btn-primary" id="ideaButton">Idea shared by:</button>
+                     {{ post.author}}
+                    <br>
+                    <br>
+                    <button class="btn btn-primary" id="ideaButton"> Created on:</button>
+                     {{ post.created_date }}
+                </h3>
+                </p>
+                <hr>
+                <p>
+                <h3>
+                   <button class="btn btn-primary" id="ideaButton"> Idea Categories:</button>
+                     {{ post.ideaCategories}}
+                    <br>
+                    <br>
+                    <button class="btn btn-primary" id="ideaButton"> Cofounder of Ideas: </button>
+                    {{ post.cofounderOfIdeas }}
+                </h3>
+                </p>
+                <p id="ideaDetailDescription">
                     {{ post.text|linebreaksbr }}
                 </p>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>
+                    Similar projects
+                </h2>
+                <p>
+                    Add a link to a similar project, latest article or a cool video related to this idea.
+                </p>
+                <button class="btn btn-primary" id="ideaButton">Add Link</button>
+                <br>
+                <hr>
+                <h2>
+                    Interested
+                </h2>
+                <p>
+                    Get in touch with people passionate about realizing this idea. Show others how you can contribute (eg. webdesign, funding, media coverage, launch in your country).
+                </p>
+                <button class="btn btn-primary" id="ideaButton">I wanna do this</button>
 
 
             </div>
+
 
         </div>
 

@@ -171,5 +171,19 @@ form .form-group {
 }
 
 #ideaDetail{
-    padding: 80px;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-bottom: 120px;
+}
+
+#ideaDetailDescription{
+    font-size: medium;
+    font-family: comic sans ms;
+    padding: 40px;
+    font-weight: bold;
+}
+
+#ideaButton{
+    width: 150px;
+
 }
