@@ -26,7 +26,7 @@ form .form-group {
 }
 .navbar{
     margin-bottom: 0px;
-    background-color: #b64040;
+    background-color: #605ca4 !important;
 }
 #InterA {
     text-align: center;
@@ -91,7 +91,7 @@ form .form-group {
 }
 
 .row {
-    padding: 0px;
+    padding: 20px;
 }
 
 .searchImage {
