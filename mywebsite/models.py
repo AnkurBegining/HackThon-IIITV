@@ -4,18 +4,19 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
+
 # Create your models here.
 class Post(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
-    titleImage= models.FileField(null=True, blank=True)
+    titleImage = models.FileField(null=True, blank=True)
     text = models.TextField()
     ideaCategories = models.TextField()
     cofounderOfIdeas = models.TextField()
     created_date = models.DateTimeField(
-            default=timezone.now)
+        default=timezone.now)
     published_date = models.DateTimeField(
-            blank=True, null=True)
+        blank=True, null=True)
 
     def publish(self):
         self.published_date = timezone.now()
@@ -23,6 +24,7 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
 
 class Comment(models.Model):
     post = models.ForeignKey('mywebsite.Post', related_name='comments')
@@ -37,3 +39,16 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.text
+
+
+class CreateWorkshop(models.Model):
+    WorkshopName = models.CharField(max_length=50, default="")
+    StartDate = models.DateField()
+    EndDate = models.DateField()
+    Subject = models.CharField(max_length=50)
+    Topic = models.CharField(max_length=50)
+    Venue = models.CharField(max_length=200)
+    Description = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return self.WorkshopName

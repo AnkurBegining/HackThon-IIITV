@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from .models import Post, Comment
-from .forms import PostForm, CommentForm
+from .forms import PostForm, CommentForm, CreateWorkshopForm
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 
@@ -11,6 +11,9 @@ def firstPage(request):
 
 def workshop(request):
     return render(request, 'mywebsite/workshop.html')
+
+def createworkshop(request):
+    return render(request, 'mywebsite/createWorkshop.html')
 
 @login_required
 def view_profile(request):
@@ -41,6 +44,20 @@ def post_new(request):
         form = PostForm()
     return render(request, 'mywebsite/post_edit.html', {'form': form})
 
+def CreateWorkshop(request):
+    if request.method == "POST":
+        form = CreateWorkshopForm(request.POST)
+        if form.is_valid():
+            createworkshoppost = form.save(commit=False)
+            createworkshoppost.WorkshopName = request.user
+            createworkshoppost.save()
+            return  redirect('/workshop/')
+    else:
+        form = CreateWorkshopForm()
+        return render(request,'mywebsite/createWorkshop.html',{'form':form})
+
+
+
 def post_edit(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == "POST":
@@ -53,6 +70,7 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'mywebsite/post_edit.html', {'form': form})
+
 
 def add_comment_to_post(request, pk):
     post = get_object_or_404(Post, pk=pk)
