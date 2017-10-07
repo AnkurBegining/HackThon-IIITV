@@ -4,7 +4,7 @@
     <div class="cotainer-fluid" id="ideaDetail">
         <div class="row">
 
-            <div class="col-md-12" >
+            <div class="col-md-12">
                 <h1 id="ideaTitle">
                     {{ post.title }}
                 </h1>
@@ -12,21 +12,21 @@
                 <p>
                 <h3>
                     <button class="btn btn-primary" id="ideaButton">Idea shared by:</button>
-                     {{ post.author}}
+                    {{ post.author }}
                     <br>
                     <br>
                     <button class="btn btn-primary" id="ideaButton"> Created on:</button>
-                     {{ post.created_date }}
+                    {{ post.created_date }}
                 </h3>
                 </p>
                 <hr>
                 <p>
                 <h3>
-                   <button class="btn btn-primary" id="ideaButton"> Idea Categories:</button>
-                     {{ post.ideaCategories}}
+                    <button class="btn btn-primary" id="ideaButton"> Idea Categories:</button>
+                    {{ post.ideaCategories }}
                     <br>
                     <br>
-                    <button class="btn btn-primary" id="ideaButton"> Cofounder of Ideas: </button>
+                    <button class="btn btn-primary" id="ideaButton"> Cofounder of Ideas:</button>
                     {{ post.cofounderOfIdeas }}
                 </h3>
                 </p>
@@ -52,9 +52,30 @@
                     Interested
                 </h2>
                 <p>
-                    Get in touch with people passionate about realizing this idea. Show others how you can contribute (eg. webdesign, funding, media coverage, launch in your country).
+                    Get in touch with people passionate about realizing this idea. Show others how you can contribute
+                    (eg. webdesign, funding, media coverage, launch in your country).
                 </p>
                 <button class="btn btn-primary" id="ideaButton">I wanna do this</button>
+                <hr>
+
+                <a class="btn btn-default" href="{% url 'mywebsite:add_comment_to_post' pk=post.pk %}">Add comment</a>
+                {% for comment in post.comments.all %}
+                    <div class="comment">
+                        <div class="date">
+                            {{ comment.created_date }}
+                            {% if not comment.approved_comment %}
+                                <a class="btn btn-default" href="{% url 'mywebsite:comment_remove' pk=comment.pk %}"><span
+                                        class="glyphicon glyphicon-remove"></span></a>
+                                <a class="btn btn-default" href="{% url 'mywebsite:comment_approve' pk=comment.pk %}"><span
+                                        class="glyphicon glyphicon-ok"></span></a>
+                            {% endif %}
+                        </div>
+                        <strong>{{ comment.author }}</strong>
+                        <p>{{ comment.text|linebreaks }}</p>
+                    </div>
+                {% empty %}
+                    <p>No comments here yet :(</p>
+                {% endfor %}
 
 
             </div>
