@@ -1,0 +1,44 @@
+{% extends 'mywebsite/base2.html' %}
+
+{% block content %}
+    <div class="cotainer-fluid" >
+        <div class="row">
+            <div class="col-md-12" id="ideaDetail">
+                {% if post.published_date %}
+                    <div class="date">
+                        {{ post.published_date }}
+                    </div>
+                {% else %}
+                    <a class="btn btn-default" href="#">Publish</a>
+                {% endif %}
+                <a class="btn btn-default" href="#"><span
+                        class="glyphicon glyphicon-pencil"></span></a>
+                <a class="btn btn-default" href="#"><span
+                        class="glyphicon glyphicon-remove"></span></a>
+
+                <h1 id="ideaTitle">
+                    {{ post.title }}
+                </h1>
+
+                <h2>
+                    {{ post.author|linebreaks }}
+                    Categories: {{ post.ideaCategories|linebreaks }}
+                    {{ post.cofounderOfIdeas }}
+                </h2>
+
+
+                <p>
+                    {{ post.text|linebreaksbr }}
+                </p>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <hr>
+
+{% endblock %}

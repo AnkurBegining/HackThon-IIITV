@@ -56,6 +56,10 @@ form .form-group {
     padding: 0px;
     margin: 0px;
 }
+.ideaImage{
+    width: auto;
+    max-height: 70%;
+}
 
 .backFirstImage {
     height: 335px;
@@ -136,11 +140,13 @@ form .form-group {
 
 #courses-container {
     background-image: url("trainingBackground.png");
+    min-height: 1500px;
 }
 
 .loginRow {
     padding-top: 10%;
     padding-bottom: 20%;
+
 }
 
 #copyright {
@@ -154,4 +160,16 @@ form .form-group {
 
 .post h1 a, .post h1 a:visited {
     color: #ffffff;
+}
+
+.thumbnail{
+    min-height: 278.719px;
+    max-height: 278.719px;
+}
+#ideaTitle{
+    text-align: center;
+}
+
+#ideaDetail{
+    padding: 80px;
 }
