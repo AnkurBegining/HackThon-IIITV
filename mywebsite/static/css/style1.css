@@ -24,7 +24,10 @@ form .form-group {
 #internships {
     text-align: center;
 }
-
+.navbar{
+    margin-bottom: 0px;
+    background-color: #b64040;
+}
 #InterA {
     text-align: center;
     margin-bottom: 20px;
@@ -74,8 +77,8 @@ form .form-group {
 }
 
 .firstContainer {
-    height: 150px;
-    padding-top: 50px;
+    height: 70px;
+    padding-top: 0px;
     padding-bottom: 0px !important;
     margin-bottom: 0%;
 }
@@ -172,4 +175,45 @@ form .form-group {
 
 #ideaDetail{
     padding: 80px;
+}
+#d
+{background-color: #605ca4 !important;
+    position:relative;
+    bottom:0px;
+    color: #020205;
+
+}
+#f
+{
+    background-color: #f5f8fa;
+}
+#topNavBar
+{
+    padding-right: 10px;
+padding-left: 0px;
+}
+#co
+{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.Internship
+{
+    color: #020205;
+}
+.navbar-brand
+{
+    color: #020205;
+}
+.summert
+{
+color: #020205;
+}
+.blog
+{
+    color: #020205;
+}
+#qw
+{
+    color: #020205;
 }
