@@ -9,6 +9,9 @@ from django.utils import timezone
 def firstPage(request):
     return render(request, 'mywebsite/firstPage.html', {})
 
+def workshop(request):
+    return render(request, 'mywebsite/workshop.html')
+
 @login_required
 def view_profile(request):
     args = {'user': request.user}
