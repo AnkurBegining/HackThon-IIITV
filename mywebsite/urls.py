@@ -7,6 +7,7 @@ urlpatterns = [
     url(r'^accounts/signup/$', core_views.signup, name='signup'),
     url(r'^tedx/$', core_views.tedx, name='tedx'),
     url(r'^motivational/$', core_views.motivational, name='motivational'),
+    url(r'^institutional/$', core_views.institutional, name='institutional'),
     url(r'^blog/$', core_views.blog, name='blog'),
     url(r'^create-blog/$', core_views.createblog, name='createblog'),
     url(r'^create-workshop/$', views.CreateWorkshop, name='createworkshop'),
