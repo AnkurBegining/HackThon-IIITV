@@ -19,11 +19,15 @@ import smtplib
 def firstPage(request):
     return render(request, 'mywebsite/firstPage.html', {})
 
+def videos(request):
+    return render(request, 'mywebsite/video.html', {})
+
 def workshop(request):
     return render(request, 'mywebsite/workshop.html')
 
-def createworkshop(request):
-    return render(request, 'mywebsite/createWorkshop.html')
+
+def tedx(request):
+    return render(request, 'mywebsite/Tedx.html')
 
 @login_required
 def view_profile(request):

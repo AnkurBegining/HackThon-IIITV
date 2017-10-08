@@ -5,7 +5,9 @@ from mywebsite import views as core_views
 urlpatterns = [
     url(r'^$', views.firstPage, name='firstPage'),
     url(r'^accounts/signup/$', core_views.signup, name='signup'),
-    url(r'^create-workshop/$', views.createworkshop, name='createworkshop'),
+    url(r'^tedx/$', core_views.tedx, name='tedx'),
+    url(r'^create-workshop/$', views.CreateWorkshop, name='createworkshop'),
+    url(r'^videos/$', views.videos, name='videos'),
     url(r'^workshop/$',views.workshop, name='workshop'),
     url(r'^secondpage/$', views.post_list, name='post_list'),
     url(r'^secondpage/post/new/$', views.post_new, name='post_new'),

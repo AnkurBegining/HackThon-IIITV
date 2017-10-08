@@ -215,3 +215,82 @@ padding-left: 0px;
     padding-top: 50px;
     margin-top: 500px;
 }
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 300px;
+	margin-left: 60px;
+	margin-right:20px;
+
+}
+
+div.gallery:hover {
+    border: 5px solid #777;
+	background-color:grey;
+}
+
+div.gallery img {
+    width: 100%;
+    height: 200px;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+
+
+/* heading properties*/
+
+#heading1
+{
+	font-family:"comic sans ms";
+	margin-left:130px;
+
+}
+#heading2
+{
+	font-family:cooper black;
+}
+
+button
+{
+	width:250px;
+
+}
+
+button:hover
+{
+	background-color:#63c1d0;
+}
+#div2
+{
+	margin-left:560px;
+}
+#div3
+{
+	margin-left:200px;
+}
+#div4
+{
+	margin-left:168px;
+}
+#text1
+{
+	margin-left:35px;
+	margin-top:9px;
+	width:400px;
+}
+#heading3
+{
+
+	font-family:"comic sans ms";
+
+}
+
+#img1:hover
+{
+	background-color:grey;
+}
