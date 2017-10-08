@@ -25,6 +25,9 @@ urlpatterns = [
     url(r'^accounts/login/$', views.login, name='login'),
     url(r'^accounts/profile/$', core_views.view_profile, name='view_profile'),
     url(r'^accounts/logout/$', views.logout, {'template_name': 'mywebsite/logout.html'}, name='logout'),
+    url(r'^account_activation_sent/$', core_views.account_activation_sent, name='account_activation_sent'),
+    url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$', core_views.activate,
+        name='activate'),
 
     url(r'', include('mywebsite.urls', namespace='mywebsite')),
 ]

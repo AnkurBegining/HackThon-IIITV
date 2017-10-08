@@ -4,6 +4,7 @@ from mywebsite import views as core_views
 
 urlpatterns = [
     url(r'^$', views.firstPage, name='firstPage'),
+    url(r'^accounts/signup/$', core_views.signup, name='signup'),
     url(r'^create-workshop/$', views.createworkshop, name='createworkshop'),
     url(r'^workshop/$',views.workshop, name='workshop'),
     url(r'^secondpage/$', views.post_list, name='post_list'),
