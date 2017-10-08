@@ -169,7 +169,7 @@ form .form-group {
 
 .thumbnail{
     min-height: 278.719px;
-    max-height: 278.719px;
+    height: 300.719px;
 }
 #ideaTitle{
     text-align: center;

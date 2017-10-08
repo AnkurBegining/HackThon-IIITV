@@ -36,6 +36,7 @@ def view_profile(request):
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    print("Posts: ", posts)
     return render(request, 'mywebsite/post_list.html', {'posts': posts})
 
 
@@ -48,9 +49,11 @@ def post_detail(request, pk):
 
 def post_new(request):
     if request.method == "POST":
-        form = PostForm(request.POST)
+        print(request.FILES)
+        form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             post = form.save(commit=False)
+            print("Post: ", form)
             post.author = request.user
             post.save()
             return redirect('mywebsite:post_detail', pk=post.pk)
