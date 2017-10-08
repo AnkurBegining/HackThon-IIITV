@@ -20,6 +20,9 @@ import smtplib
 def firstPage(request):
     return render(request, 'mywebsite/firstPage.html', {})
 
+def selfmade(request):
+    return render(request, 'mywebsite/selfmade.html', {})
+
 def institutional(request):
     return render(request, 'mywebsite/institutional.html', {})
 
