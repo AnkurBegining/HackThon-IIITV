@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Post, Comment, CreateWorkshop
+from .models import Post, Comment, CreateWorkshop, CreateBlog
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
@@ -21,6 +21,11 @@ class CreateWorkshopForm(forms.ModelForm):
     class Meta:
         model = CreateWorkshop
         fields = ('WorkshopName', 'StartDate', 'EndDate', 'Subject', 'Topic', 'Venue', 'Description')
+
+class CreateBlogForm(forms.ModelForm):
+    class Meta:
+        model = CreateBlog
+        fields = ('BlogName', 'BlogAddressFirstName', 'BlogDescription', 'Comment')
 
 
 
