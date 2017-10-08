@@ -8,34 +8,81 @@
                 <h1 id="ideaTitle">
                     {{ post.title }}
                 </h1>
-
-                <p>
-                <h3>
-                    <button class="btn btn-primary" id="ideaButton">Idea shared by:</button>
-                    {{ post.author }}
-                    <br>
-                    <br>
-                    <button class="btn btn-primary" id="ideaButton"> Created on:</button>
-                    {{ post.created_date }}
-                </h3>
-                </p>
-                <hr>
-                <p>
-                <h3>
-                    <button class="btn btn-primary" id="ideaButton"> Idea Categories:</button>
-                    {{ post.ideaCategories }}
-                    <br>
-                    <br>
-                    <button class="btn btn-primary" id="ideaButton"> Cofounder of Ideas:</button>
-                    {{ post.cofounderOfIdeas }}
-                </h3>
-                </p>
-                <p id="ideaDetailDescription">
-                    {{ post.text|linebreaksbr }}
-                </p>
             </div>
 
         </div>
+
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                               <tr>
+                                   <th>
+                                       <button class="btn btn-primary" id="ideaButton">
+
+                                       Idea Shared By
+                                           </button>
+                                   </th>
+                                   <th>
+                                       <button class="btn btn-primary" id="ideaButton">
+                                       Created On
+                                       </button>
+                                   </th>
+                                   <th>
+                                       <button class="btn btn-primary" id="ideaButton">
+                                       Idea Categories
+                                       </button>
+                                   </th>
+                                   <th>
+                                       <button class="btn btn-primary" id="ideaButton">
+                                       Cofounder of Ideas
+                                       </button>
+                                   </th>
+                               </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+
+                                        {{ post.author }}
+
+                                    </td>
+
+                                    <td>
+
+                                        {{ post.created_date }}
+
+                                    </td>
+
+                                    <td>
+
+                                        {{ post.ideaCategories}}
+                                    </td>
+
+                                    <td>
+
+                                        {{ post.cofounderOfIdeas }}
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+     <div class="row">
+         <div class="col-md-12">
+             <p id="ideaDetailDescription">
+                    {{ post.text|linebreaksbr }}
+             </p>
+
+         </div>
+
+     </div>
+
 
         <div class="row">
             <div class="col-md-12">
@@ -64,9 +111,11 @@
                         <div class="date">
                             {{ comment.created_date }}
                             {% if not comment.approved_comment %}
-                                <a class="btn btn-default" href="{% url 'mywebsite:comment_remove' pk=comment.pk %}"><span
+                                <a class="btn btn-default"
+                                   href="{% url 'mywebsite:comment_remove' pk=comment.pk %}"><span
                                         class="glyphicon glyphicon-remove"></span></a>
-                                <a class="btn btn-default" href="{% url 'mywebsite:comment_approve' pk=comment.pk %}"><span
+                                <a class="btn btn-default"
+                                   href="{% url 'mywebsite:comment_approve' pk=comment.pk %}"><span
                                         class="glyphicon glyphicon-ok"></span></a>
                             {% endif %}
                         </div>

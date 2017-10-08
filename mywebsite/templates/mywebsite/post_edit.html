@@ -1,9 +1,29 @@
 {% extends 'mywebsite/base.html' %}
 
 {% block content %}
-    <h1>New post</h1>
-    <form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
-    </form>
+    <div class="container-fluid">
+        <div class="row " id="ideaTitle">
+            <h1>
+                New Post
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-8">
+                <form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="save btn btn-default">Save</button>
+                </form>
+
+            </div>
+            <div class="col-md-2">
+
+            </div>
+        </div>
+
+    </div>
+
+
 {% endblock %}
