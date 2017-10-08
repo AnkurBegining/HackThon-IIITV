@@ -23,6 +23,10 @@ def firstPage(request):
 def institutional(request):
     return render(request, 'mywebsite/institutional.html', {})
 
+def DigitalMarketing(request):
+    return render(request, 'mywebsite/DigitalMarketing.html', {})
+
+
 def motivational(request):
     return render(request, 'mywebsite/motivational.html', {})
 
