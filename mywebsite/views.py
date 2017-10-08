@@ -26,6 +26,9 @@ def institutional(request):
 def DigitalMarketing(request):
     return render(request, 'mywebsite/DigitalMarketing.html', {})
 
+def Government_Initiatives(request):
+    return render(request, 'mywebsite/Government_Initiatives.html', {})
+
 
 def motivational(request):
     return render(request, 'mywebsite/motivational.html', {})
