@@ -22,6 +22,9 @@ def firstPage(request):
 def videos(request):
     return render(request, 'mywebsite/video.html', {})
 
+def blog(request):
+    return render(request, 'mywebsite/blog.html', {})
+
 def workshop(request):
     return render(request, 'mywebsite/workshop.html')
 

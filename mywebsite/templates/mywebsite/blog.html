@@ -1,26 +1,17 @@
 {% load staticfiles %}
-<html>
+{% block content %}
 <head>
-
-    <title>entrepreneurAdicr</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic|Open+Sans+Condensed:300,300italic,700"
-          rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="{% static 'css/style1.css' %}" type="text/css">
+  <title>BLOG</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{% static 'css/blog_style.css' %}" type="text/css">
 
 
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--chng-->
-    <!-- styles -->
-    <script>
-
-    </script>
 </head>
-<body id="f">
+<body>
 
 <nav class="navbar navbar-inverse firstContainer" id="d">
     <div class="container-fluid" id="co">
@@ -119,9 +110,55 @@
     </div>
 
 </nav>
-{% block content %}
-{% endblock %}
+
+<br>
+<br>
+
+<div id="div1">
+<div class="container-fluid">
+
+<div class="row">
+
+
+
+	<div class="col-lg-12 ">
+
+	<div class="col-lg-4">
+
+<div class="gallery">
+  <a target="_blank" href="fjords.jpg">
+    <img src="{% static 'images/blog.jpg' %}" class="img-circle" alt="Cinque Terre" width="304" height="236">
+  </a>
+
+</div></div>
+
+<div class="col-lg-4">
+<div class="gallery">
+  <a target="_blank" href="forest.jpg">
+    <img src="{% static 'images/share.jpg' %}" class="img-circle" alt="Cinque Terre" width="304" height="236">
+  </a>
+
+</div></div>
+
+
+
+<div class="col-lg-4">
+<div class="gallery">
+  <a target="_blank" href="lights.jpg">
+    <img src="{% static 'images/comment.jpg' %}" class="img-circle" alt="Cinque Terre" width="304" height="236">
+  </a>
+
+</div></div>
+
+
 </div>
+	</div>
+
+</div>
+</div>
+<h1 id="nk" ><a href="#">Create Blog page</a></h1>
+
+
 <nav class="navbar navbar-inverse belowContainer">
 
 
@@ -275,4 +312,4 @@
 
 
 </body>
-</html>
+{% endblock %}
