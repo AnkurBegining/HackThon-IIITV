@@ -6,6 +6,7 @@ urlpatterns = [
     url(r'^$', views.firstPage, name='firstPage'),
     url(r'^accounts/signup/$', core_views.signup, name='signup'),
     url(r'^tedx/$', core_views.tedx, name='tedx'),
+    url(r'^blog/$', core_views.blog, name='blog'),
     url(r'^create-workshop/$', views.CreateWorkshop, name='createworkshop'),
     url(r'^videos/$', views.videos, name='videos'),
     url(r'^workshop/$',views.workshop, name='workshop'),
