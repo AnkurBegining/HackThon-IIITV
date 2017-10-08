@@ -6,6 +6,7 @@ urlpatterns = [
     url(r'^$', views.firstPage, name='firstPage'),
     url(r'^accounts/signup/$', core_views.signup, name='signup'),
     url(r'^tedx/$', core_views.tedx, name='tedx'),
+    url(r'^selfmade/$', core_views.selfmade, name='selfmade'),
     url(r'^motivational/$', core_views.motivational, name='motivational'),
     url(r'^institutional/$', core_views.institutional, name='institutional'),
     url(r'^government-initiatives/$', core_views.Government_Initiatives, name='Government_Initiatives'),
