@@ -52,6 +52,15 @@ class CreateWorkshop(models.Model):
     def __str__(self):
         return self.WorkshopName
 
+class CreateBlog(models.Model):
+    BlogName = models.CharField(max_length=50)
+    BlogAddressFirstName = models.CharField(max_length=100)
+    BlogDescription = models.CharField(max_length=10000)
+    Comment = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return self.BlogName
+
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     email_confirmed = models.BooleanField(default=False)
