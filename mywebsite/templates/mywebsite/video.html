@@ -1,0 +1,152 @@
+{% extends "mywebsite/base.html" %}
+{% load staticfiles %}
+{% block content %}
+<head>
+  <title>Index1</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{% static 'css/style1.css' %}" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<body>
+{% load static %}
+<br>
+<br>
+
+	<div id="div1">
+	<div class="container-fluid">
+	<div class="row">
+
+	<h2 id="heading1"><b>Trending Videos</b></h2>
+	<br>
+
+	<div class="col-lg-12 ">
+
+	<div class="col-lg-4">
+
+<div class="gallery">
+  <a target="_blank" href="{% url 'mywebsite:tedx' %}">
+    <img src="{% static 'images/Tedx.jpg' %}" alt="Tedx" width="300" height="200" >
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div></div>
+
+<div class="col-lg-4">
+<div class="gallery">
+  <a target="_blank" href="forest.jpg">
+    <img src="{% static 'images/motivation.jpg' %}" alt="Forest" width="300" height="200">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div></div>
+
+
+
+<div class="col-lg-4">
+<div class="gallery">
+  <a target="_blank" href="{% static 'images/gov.jpg' %}">
+    <img src="{% static 'images/selfmade.jpg' %}" alt="Northern Lights" width="300" height="200">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div></div>
+
+
+</div>
+	</div>
+
+
+	<!--second row-->
+
+
+
+
+	<br>
+
+
+
+
+	<div class="row">
+
+	<h2 id="heading1"><b>Trending Videos</b></h2>
+	<br>
+
+	<div class="col-lg-12 ">
+
+	<div class="col-lg-4">
+
+<div class="gallery">
+  <a target="_blank" href="fjords.jpg">
+    <img src="{% static 'images/digital.jpg' %}" alt="digital" width="300" height="200" >
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div></div>
+
+<div class="col-lg-4">
+<div class="gallery">
+  <a target="_blank" href="forest.jpg">
+    <img src="{% static 'images/gov.jpg' %}" alt="government" width="300" height="200">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div></div>
+
+
+
+<div class="col-lg-4">
+<div class="gallery">
+  <a target="_blank" href="lights.jpg">
+    <img src="{% static 'images/insti.jpg' %}" alt="insti" width="300" height="200">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div></div>
+
+
+</div>
+	</div>
+
+
+
+	</div>
+	<br>
+	<br>
+
+
+
+
+
+	</div>
+
+	<div id="div2">
+	<button type="submit" value="Submit"><h5 id="heading2"><b>VIEW ALL VIDEOS<b></h5></button></div>
+
+	<br>
+	<br>
+	<br>
+	<br><br><br>
+
+	<div id="div3">
+	<div class="gallery">
+	  <a target="_blank" href="#">
+    <img src="blog1.jpg" class="img-circle"id="img1"  width="304" height="236">
+  </a></div>
+
+
+	</div>
+
+
+	<br>
+	<br>
+
+	<!--<div id="div4">
+	<table>
+	<tr>
+	<td><h3 id="heading3"><b>Article<b>  </h3></td>
+	<td><input type="text"id ="text1"></td></tr></table>
+	</div>-->
+
+
+
+
+
+
+</body>
+{% endblock %}

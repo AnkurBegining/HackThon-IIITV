@@ -1,6 +1,7 @@
 {% extends 'mywebsite/base.html' %}
-
+{% load staticfiles %}
 {% block content %}
+    <link href="style1.css" rel="stylesheet" type="text/css">
     <h1>Request Workshop</h1>
     <form method="POST" class="createworkshop-form">{% csrf_token %}
         {{ form.as_p }}
