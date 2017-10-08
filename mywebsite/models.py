@@ -15,8 +15,7 @@ class Post(models.Model):
     cofounderOfIdeas = models.TextField()
     created_date = models.DateTimeField(
         default=timezone.now)
-    published_date = models.DateTimeField(
-        blank=True, null=True)
+    published_date = models.DateTimeField(default=timezone.now)
 
     def publish(self):
         self.published_date = timezone.now()
