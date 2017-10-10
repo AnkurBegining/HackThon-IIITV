@@ -2,7 +2,7 @@
 {% load staticfiles %}
 {% block content %}
     <link rel="stylesheet" href="{% static 'css/Login.css' %}" type="text/css">
-    <div class="container " id="loginContainer">
+    <div class="container " id="loginContainer topNavBar" >
         <img src="{% static 'images/image2.png' %}" id="loginContainerimg">
         {% if form.errors %}
             <p>Your username and password didn't match. Please try again.</p>
@@ -11,10 +11,10 @@
         <form method="post" action="{% url 'login' %}">
             {% csrf_token %}
             <div class="form-input">
-                <input type="text" name="username" placeholder=" Enter Username" {{ form.username }} >
+                <input type="text" id="problemcreator" name="username" placeholder=" Enter Username" {{ form.username }} >
             </div>
             <div class="form-input">
-                <input type="password" name="password" placeholder=" Enter Password" {{ form.password }} >
+                <input type="password" id="problemcreator" name="password" placeholder=" Enter Password" {{ form.password }} >
             </div>
             <input type="submit" name="submit" value="LOGIN" class="btn-large">
             <input type="hidden" name="next" value="{{ next }}"/><br>

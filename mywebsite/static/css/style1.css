@@ -25,8 +25,15 @@ form .form-group {
     text-align: center;
 }
 .navbar{
-    margin-bottom: 0px;
+    padding: 10px;
     background-color: #605ca4 !important;
+    min-height: 15%;
+}
+.navbar-brand{
+    margin-top: 20px;
+}
+#topNavBar{
+    margin-top: 20px;
 }
 #InterA {
     text-align: center;
