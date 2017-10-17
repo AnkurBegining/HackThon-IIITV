@@ -11,7 +11,9 @@ h2 {
     margin-top: 0%;
 
 }
-
+.navbar-header{
+    position: fixed;
+}
 form .form-group {
     margin-top: -12px;
     margin-left: 10% !important;
@@ -74,9 +76,11 @@ form .form-group {
 }
 
 .firstContainer {
-    height: 150px;
-    padding-top: 50px;
-    padding-bottom: 0px !important;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0px 3px 3px 0px rgba(100, 100, 100, 0.75);
+    height: 100px;
     margin-bottom: 0%;
 }
 

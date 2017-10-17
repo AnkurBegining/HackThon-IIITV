@@ -29,6 +29,10 @@ form .form-group {
     background-color: #605ca4 !important;
     min-height: 15%;
 }
+
+.navbar header{
+    position: fixed;
+}
 .navbar-brand{
     margin-top: 20px;
 }
@@ -82,13 +86,14 @@ form .form-group {
     font-size: 80%;
     text-align: right;
 }
-
 .firstContainer {
-    height: 90px;
-    padding-top: 0px;
-    padding-bottom: 0px !important;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0px 3px 3px 0px rgba(100, 100, 100, 0.75);
+    height: 100px;
+
     margin-bottom: 0%;
-    padding-right: 5px;
 }
 
 .navbar-header img {
@@ -178,6 +183,7 @@ form .form-group {
     min-height: 278.719px;
     height: 300.719px;
     margin-bottom: 150px;
+    z-index: 2;
 }
 #ideaTitle{
     text-align: center;
