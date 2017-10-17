@@ -1,7 +1,7 @@
 {% extends 'mywebsite/base2.html' %}
 {% block content %}
     <div class="container-fluid " id="courses-container">
-    <div class="row text-center">
+        <div class="row text-center">
             <div class="col-md-12">
                 <h1>
                     Welcome to idea
@@ -9,32 +9,31 @@
 
             </div>
 
-    </div>
+        </div>
 
 
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
 
-            {% for post in posts %}
+                {% for post in posts %}
 
-                        <div class="col-md-3">
-                            <div class="thumbnail">
-                                <a href="{% url 'mywebsite:post_detail' pk=post.pk %}">
-                                    <img src="{{ post.titleImage.url }}" class="ideaImage" alt="No Image Available">
-                                    <h2>{{ post.title }}
-                                        <small>{{ post.created_date }}</small>
-                                    </h2>
-                                    <h2>{{ post.author }}</h2>
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <a href="{% url 'mywebsite:post_detail' pk=post.pk %}">
+                                <img src="{{ post.titleImage.url }}" class="ideaImage" alt="No Image Available">
+                                <h2>{{ post.title }}
+                                    <small>{{ post.created_date }}</small>
+                                </h2>
+                                <h2>{{ post.author }}</h2>
 
-                                </a>
+                            </a>
 
-                            </div>
                         </div>
+                    </div>
 
-            {% endfor %}
-               </div>
-                </div>
-
+                {% endfor %}
+            </div>
+        </div>
 
 
     </div>

@@ -105,7 +105,8 @@
                 <button class="btn btn-primary" id="ideaButton">I wanna do this</button>
                 <hr>
 
-                <a class="btn btn-default" href="{% url 'mywebsite:add_comment_to_post' pk=post.pk %}">Add comment</a>
+                <a class="btn btn-primary" href="{% url 'mywebsite:add_comment_to_post' pk=post.pk %}">Add comment</a>
+
                 {% for comment in post.comments.all %}
                     <div class="comment">
                         <div class="date">
