@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="{% static 'css/style1.css' %}" type="text/css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--chng-->
@@ -17,43 +18,26 @@
     </script>
 </head>
 <body>
-
-<nav class="navbar navbar-inverse firstContainer">
+<nav class="navbar navbar-inverse">
     <div class="container-fluid">
-
-        <!--Logo-->
-
         <div class="navbar-header">
-
-            <!--If space is not there then this button will help to expand-->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{% url 'mywebsite:firstPage' %}">entrepreneurAdicr</a>
-
+            <a class="navbar-brand" href="{% url 'mywebsite:firstPage' %}">EntrepreneurAdicr</a>
         </div>
-
-        <!--Item-->
-        <div class="collapse navbar-collapse" id="topNavBar">
+        <div class="collapse navbar-collapse" id="myNavbar">
             <form class="navbar-form navbar-left" role="search" method="get" action="#">
-                <input type="text" class="form-control" name="q" value="" placeholder="ex..">
+                <input id="SearchOption" type="text" class="form-control" name="q" value="" placeholder="ex..">
                 <button type="submit" class="btn btn-default">Search</button>
             </form>
-
             <ul class="nav navbar-nav navbar-right">
-                <li class="Internship">
-                    <a href="{% url 'mywebsite:post_list' %}">
-                        <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>&nbsp;
-                        Entrepreneurship
-                    </a>
-
-                </li>
                 <li class="SummerT">
                     <a href="#">
                         <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>&nbsp;
-                        Training
+                        Workshop
                     </a>
 
                 </li>
@@ -70,36 +54,32 @@
                     <li class="">
                         <a href="{% url 'logout' %}">
                             <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;
-                            <button class="btn btn-primary">LOGOUT</button>
+                            <button class="btn btn-primary">Log Out</button>
 
                         </a>
 
                     </li>
                 {% else %}
-                <li class="">
-                    <a href="{% url 'login' %}">
-                        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;
-                        <button class="btn btn-primary">Log In</button>
+                    <li class="">
+                        <a href="{% url 'login' %}">
+                            <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;
+                            <button class="btn btn-primary">Log In</button>
 
-                    </a>
+                        </a>
 
-                </li>
+                    </li>
 
-                <li class="dropdown">
-                    <a href="{% url 'mywebsite:signup' %}">
-                        <button class="btn btn-primary dropdown-toggle register" type="button"
-                                data-toggle="dropdown"
-                                aria-expanded="true">REGISTER
-                        </button>
+                    <li class="dropdown">
+                        <a href="{% url 'mywebsite:signup' %}">
+                            <span class="glyphicon glyphicon-user"></span>
+                            <button class="btn btn-primary">Sign Up</button>
 
-                    </a>
-                </li>
+                        </a>
+                    </li>
                 {% endif %}
-
             </ul>
         </div>
     </div>
-
 </nav>
 {% block content %}
 {% endblock %}
